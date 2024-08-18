@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 h2 {
   text-align: center;
   color: #003566;
@@ -15,16 +16,20 @@ body {
   min-height: 100vh;
   background-color: #bcd4e6;
 }
+
 .container {
   background-color: white;
   padding: 2rem;
   border-radius: 1rem;
   height: 60vh;
   width: 50vh;
+  max-width: 90%;
 }
+
 form {
   margin: 2rem 0 1rem 0;
 }
+
 form select,
 button,
 input {
@@ -35,37 +40,46 @@ input {
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
 }
+
 form input {
   border: 1px solid #8b8bae;
   font-size: 1rem;
   height: 3rem;
   padding-left: 0.5rem;
 }
+
 .dropdown {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 2rem;
+  gap: 1rem;
 }
+
 .dropdown i {
   font-size: 1.5rem;
   margin-top: 1rem;
 }
+
 .select-container img {
   max-width: 2rem;
 }
+
 .select-container {
   display: flex;
-  width: 6rem;
   justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
   border: 1px solid #8b8bae;
+  width: 100%;
 }
+
 .select-container select {
   font-size: 1rem;
   width: auto;
+  max-width: 100%;
 }
+
 .msg {
   margin: 2rem 0 2rem 0;
   text-align: center;
@@ -75,6 +89,7 @@ form input {
   font-weight: bolder;
   font-size: large;
 }
+
 form button {
   height: 3rem;
   background-color: #c5dedd;
@@ -82,4 +97,63 @@ form button {
   color: #355070;
   font-size: 1.15rem;
   font-weight: bolder;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+    padding: 1.5rem;
+  }
+
+  form input {
+    height: 2.5rem;
+    font-size: 0.9rem;
+  }
+
+  .dropdown {
+    gap: 0.5rem;
+  }
+
+  .dropdown i {
+    font-size: 1.25rem;
+  }
+
+  .msg {
+    font-size: 0.9rem;
+  }
+
+  form button {
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  form input {
+    height: 2rem;
+    font-size: 0.85rem;
+  }
+
+  .dropdown {
+    gap: 0.25rem;
+  }
+
+  .dropdown i {
+    font-size: 1rem;
+  }
+
+  .msg {
+    font-size: 0.85rem;
+  }
+
+  form button {
+    height: 2.25rem;
+    font-size: 0.9rem;
+  }
 }
